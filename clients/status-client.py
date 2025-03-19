@@ -125,7 +125,7 @@ class Network:
 
 def get_network(ip_version):
     if ip_version == 4:
-        host = 'ipv4.google.com'
+        host = 'ipv4.262e.cn'
     elif ip_version == 6:
         host = 'ipv6.google.com'
     else:
@@ -162,9 +162,9 @@ if __name__ == '__main__':
             timer = 0
             check_ip = 0
             if data.find('IPv4') > -1:
-                check_ip = 6
-            elif data.find('IPv6') > -1:
                 check_ip = 4
+            elif data.find('IPv6') > -1:
+                check_ip = 6
             else:
                 print(data)
                 raise socket.error
